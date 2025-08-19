@@ -35,6 +35,13 @@ android {
         minSdkVersion 16
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    kotlinOptions {
+        jvmTarget = "17"  // Use Java 17 for Kotlin JVM target
+        // OR jvmTarget = "11" for Java 11
+        // OR jvmTarget = "1.8" for Java 8
+    }
+
     lintOptions {
         disable 'InvalidPackage'
     }
