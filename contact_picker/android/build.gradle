@@ -2,14 +2,14 @@ group 'me.schlaubi.fluttercontactpicker'
 version '4.7.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.6.21'
+    ext.kotlin_version = '1.9.10'  // Updated from 1.6.21
     repositories {
         google()
         gradlePluginPortal()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'com.android.tools.build:gradle:8.1.4'  // Updated from 7.0.4
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -17,6 +17,7 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
+        mavenCentral()  // Added this
     }
 }
 
@@ -24,7 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace 'com.example.fluttercontactpicker'
+    namespace 'de.mintware.flutter_contact_picker'  // Fixed namespace
     compileSdkVersion 35
 
     defaultConfig {
