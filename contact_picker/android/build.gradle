@@ -38,8 +38,12 @@ android {
 
     kotlinOptions {
         jvmTarget = "17"  // Use Java 17 for Kotlin JVM target
-        // OR jvmTarget = "11" for Java 11
-        // OR jvmTarget = "1.8" for Java 8
+        // OR jvmTarget = "11" for Java 11// OR jvmTarget = "1.8" for Java 8
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     lintOptions {
