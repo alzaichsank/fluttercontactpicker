@@ -25,27 +25,23 @@ apply plugin: 'kotlin-android'
 
 android {
     namespace 'com.example.fluttercontactpicker'
-    compileSdkVersion 32
+    compileSdkVersion 35
 
-    sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
-    }
     defaultConfig {
-        targetSdkVersion 32
-        minSdkVersion 16
+        targetSdkVersion 35
+        minSdkVersion 21
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     kotlinOptions {
-        jvmTarget = "17"  // Use Java 17 for Kotlin JVM target
-        // OR jvmTarget = "11" for Java 11// OR jvmTarget = "1.8" for Java 8
+        jvmTarget = "17"  // Must match your plugin
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
-
+    
     lintOptions {
         disable 'InvalidPackage'
     }
