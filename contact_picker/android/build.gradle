@@ -24,9 +24,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    namespace 'com.example.fluttercontactpicker'
     compileSdkVersion 32
-
+    namespace 'de.mintware.flutter_contact_picker'  // Fixed namespace
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
